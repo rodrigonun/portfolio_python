@@ -18,9 +18,13 @@
 
     
 import streamlit as st
+import os
 from openai import OpenAI
 
-modelo=OpenAI(api_key=chave)
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+
+#modelo=openai_api_key
+modelo=OpenAI(api_key="openai_api_key")
 
 #escrevendo titulo e ação demandada
 st.write("### RNUNES Chatbot")
